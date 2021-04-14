@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #get "/", controller: "movies", action: "index"
-  get "/" => "movies#index" #super shorthand for the above
-  
+  #get "/" => "movies#index" #super shorthand for the above
+  root "movies#index" # even shorter shorthand for index page
   
   # Routes for the Movie resource:
 
