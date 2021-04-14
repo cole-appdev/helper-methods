@@ -5,20 +5,22 @@ Rails.application.routes.draw do
   
   # Routes for the Movie resource:
 
+  resources :movies
+
   # CREATE
-  post "/movies" => "movies#create", as: :movies #movies_url and movies_path
-  get "/movies/new" => "movies#new", as: :new_movie # new_movie_url and new_movie_path
+  #post "/movies" => "movies#create", as: :movies #movies_url and movies_path
+  #get "/movies/new" => "movies#new", as: :new_movie # new_movie_url and new_movie_path
           
   # READ
-  get "/movies" => "movies#index" #named above on line 9
-  get "/movies/:id" => "movies#show", as: :movie #movie_path() and movie_url()
+  #get "/movies" => "movies#index" #named above on line 9
+  #get "/movies/:id" => "movies#show", as: :movie #movie_path() and movie_url()
   
   # UPDATE
-  patch "/movies/:id" => "movies#update" #named above
-  get "/movies/:id/edit" => "movies#edit", as: :edit_movie #will expect an argument
+  #patch "/movies/:id" => "movies#update" #named above
+  #get "/movies/:id/edit" => "movies#edit", as: :edit_movie #will expect an argument
   
   # DELETE
-  delete "/movies/:id" => "movies#destroy"
+  #delete "/movies/:id" => "movies#destroy"
 
   #------------------------------
 end
